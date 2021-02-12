@@ -30,6 +30,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
   let cartItems = localStorage.getItem('cartItems').split(",");
   set = new Set(cartItems);
+  if(set.has("")){
+    set.clear();
+  }
   initItems(set);
 
 });
