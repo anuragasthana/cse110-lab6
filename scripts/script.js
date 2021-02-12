@@ -49,8 +49,7 @@ function cartItem(productID){
     button.innerText = 'Remove from cart';
     set.add(productID.toString());
   }
-  let numItems = document.getElementById('cart-count');
-  numItems.innerText = set.size;
+  setItemNum();
   let cartItems = localStorage.setItem('cartItems', [...set.keys()].join());
   alert(message);
 }
@@ -61,6 +60,10 @@ function initItems(set){
     let button = item.shadowRoot.querySelector('button');
     button.innerText = 'Remove from cart'; 
   }
+  setItemNum();
+}
+
+function setItemNum(){
   let numItems = document.getElementById('cart-count');
   numItems.innerText = set.size;
 }
