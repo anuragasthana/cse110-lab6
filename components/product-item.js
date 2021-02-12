@@ -24,7 +24,7 @@ class ProductItem extends HTMLElement {
     caption.setAttribute('class', 'title');
     cost.setAttribute('class', 'price');
     caption.innerText = des;
-    cost.innerText = "$"+price;
+    cost.innerText = "$"+parseFloat(price).toFixed(2);
 
     button.setAttribute('onclick', `cartItem(${productID})`);
     button.innerText = 'Add to Cart';
