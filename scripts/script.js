@@ -4,11 +4,6 @@ let set;
 
 window.addEventListener('DOMContentLoaded', () => {
 
-  let shop = document.getElementById('shop-icon');
-  shop.innerHTML = `<img src="./assets/shop-icon.png">`;
-  let cart = document.getElementById('cart-icon');
-  shop.innerHTML = `<img src="./assets/cart-icon.png">`;
-
   if(localStorage.getItem('array') === null){
     fetch('https://fakestoreapi.com/products')
     .then(response => response.json())
