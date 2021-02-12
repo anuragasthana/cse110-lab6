@@ -23,8 +23,12 @@ window.addEventListener('DOMContentLoaded', () => {
     `;
   }
 
-  let cartItems = localStorage.getItem('cartItems').split(",");
-  set = new Set(cartItems);
+  let cartItems = localStorage.getItem('cartItems');
+  if(cartItems == null){
+    set = new Set();
+  } else{
+    set = new Set(cartItems.split(","));
+  }
   if(set.has("")){
     set.clear();
   }
