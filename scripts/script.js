@@ -32,7 +32,7 @@ window.addEventListener('DOMContentLoaded', () => {
   if(set.has("")){
     set.clear();
   }
-  initItems(set);
+  initItems();
 
 });
 
@@ -54,7 +54,7 @@ function cartItem(productID){
   alert(message);
 }
 
-function initItems(set){
+function initItems(){
   for(let key of set){
     let item = document.getElementById(key);
     let button = item.shadowRoot.querySelector('button');
